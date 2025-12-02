@@ -1,0 +1,133 @@
+
+
+<ul *ngFor="let item of shops"></ul>
+  <div class="body">
+  <div class="container 1">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-success">Weekly Grocery Stock Dashboard</h2>
+    <p class="text-muted">Track and update your grocery items weekly</p>
+  </div>
+
+  <div class="card shadow-sm p-4">
+    <table class="table table-hover align-middle">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">Product ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Last Checked</th>
+          <th scope="col">newstockqty</th>
+          <th scope="col">totalstock</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of shops">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>
+            <input
+            type="number"
+            class="form-control form-control-sm w-50"
+             [(ngModel)]="item.quantity"
+             (ngModelChange)="calculateTotal(item)"
+             min="0"
+            />
+
+          </td>
+           <td>
+          {{item.lastchecked}}
+          </td>
+          <td>
+            <input 
+            type="number"
+            class="form-control form-control-sm w-50"
+            [(ngModel)]="item.newstockqty"
+            (ngModelChange)="calculateTotal(item)"
+            />
+        
+           <td>
+           <input
+             type="number"
+             class="form-control form-control-sm w-50"
+             [value]="item.totalstock"
+             readonly
+            />
+            
+         </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="text-end mt-3">
+      <button class="btn btn-primary" (click)="checkAllProducts()">
+        Weekly Check All
+      </button>
+    </div>
+    
+    
+
+    
+    
+  </div>
+</div>
+</div>
+
+<div class="body">
+    <!-- Bootstrap Form Template -->
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h4 class="text-center mb-4 text-primary fw-bold">
+      Add / Update Grocery Stock
+    </h4>
+
+    <form>
+
+      <!-- ID -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Item ID</label>
+        <input type="text" class="form-control" placeholder="Enter item ID" />
+      </div>
+
+      <!-- Name -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Item Name</label>
+        <input type="text" class="form-control" placeholder="Enter item name" />
+      </div>
+
+      <!-- Quantity -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Quantity</label>
+        <input type="number" class="form-control" placeholder="Enter quantity" />
+      </div>
+
+      <!-- Last Checked -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Last Checked</label>
+        <input type="text" class="form-control" placeholder="Enter last checked date (e.g. Nov 15)" />
+      </div>
+
+      <!-- New Stock ID -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">New Stock ID</label>
+        <input type="number" class="form-control" placeholder="Enter new stock ID" />
+      </div>
+
+      <!-- Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-success px-4" >
+          Submit
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+
+
+
+

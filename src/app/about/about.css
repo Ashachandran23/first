@@ -1,0 +1,102 @@
+.body
+{
+    background-color: #7dffb1 ;
+}
+.container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title fade-in and slide from top */
+.text-center h1 {
+  animation: slideDown 1s ease;
+}
+
+/* Subtext fade-in */
+.text-center p {
+  animation: fadeIn 1.5s ease;
+}
+
+/* Image animation: gentle zoom-in on load and hover effect */
+.col-md-6 img {
+  animation: zoomIn 1.2s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.col-md-6 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Text area slide from right */
+.col-md-6:nth-child(2) {
+  animation: slideRight 1.3s ease;
+}
+
+/* List items fade in sequentially */
+ul li {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+ul li:nth-child(1) { animation-delay: 0.3s; }
+ul li:nth-child(2) { animation-delay: 0.5s; }
+ul li:nth-child(3) { animation-delay: 0.7s; }
+ul li:nth-child(4) { animation-delay: 0.9s; }
+
+/* Paragraph styling */
+p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ✅ Keyframes Section */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

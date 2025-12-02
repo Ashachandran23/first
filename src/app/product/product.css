@@ -1,0 +1,109 @@
+/* Animated Green Background */
+.green-bg {
+  background: linear-gradient(135deg,  #b8ffda, #7dffb1, #00e676);
+  background-size: 300% 300%;
+  animation: bgMove 10s alternate infinite;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+@keyframes bgMove {
+  0% {background-position: left;}
+  100% {background-position: right;}
+}
+
+/* Fade In */
+.fade-in {
+  animation: fadeIn 1.1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Slide Down */
+.slide-down {
+  animation: slideDown 0.9s ease-out;
+}
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  animation: popUp 0.7s ease;
+}
+@keyframes popUp {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* Table Header Green */
+.table-header-green {
+  background: linear-gradient(90deg, #00e676, #00c853);
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Hover Row Animation */
+.row-hover-green {
+  transition: 0.3s;
+}
+.row-hover-green:hover {
+  background: #eaffea;
+  transform: scale(1.02);
+}
+
+/* Neon Input Green */
+.neon-input-green:focus {
+  border-color: #00e676;
+  box-shadow: 0 0 10px #00e676;
+}
+
+/* Buttons */
+.btn-green {
+  background: linear-gradient(90deg, #00c853, #00e676);
+  color: white;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 30px;
+  box-shadow: 0 0 12px #00e676;
+  transition: 0.3s;
+}
+.btn-green:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px #00ff85;
+}
+
+.btn-green-light {
+  background: linear-gradient(90deg, #69f0ae, #00e676);
+  color: white;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn-green-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px #00e676;
+}
+
+/* Title Glow */
+.title-glow-green {
+  color: #004d1a;
+  text-shadow: 0 0 8px #00ff77, 0 0 18px #00c853;
+}
+
+.body
+{
+  background-color:#7dffb1 ;
+  margin-top: 50px;
+}
+
+
+
+
